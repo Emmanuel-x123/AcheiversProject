@@ -25,7 +25,7 @@ def roomhome (request):
     room_count = rooms.count()
     room_messages = Message.objects.filter(Q(room__topic__name__icontains=q))
     context = {'rooms': rooms, 'topics': topics, 'room_count': room_count, 'room_messages': room_messages}
-    return render(request, 'learn/roomhome.html', context)
+    return render(request, 'roomhome.html', context)
 
 
 def room (request, pk):
@@ -43,7 +43,7 @@ def room (request, pk):
 
     
     context = {'room': room, 'room_messages': room_messages, 'participants': participants}
-    return render(request, 'learn/room.html', context)
+    return render(request, 'room.html', context)
 
 def userProfile(request, pk):
     user = User.objects.get(id=pk)
@@ -51,7 +51,7 @@ def userProfile(request, pk):
     room_messages = user.message_set.all()
     topics = Topic.objects.all()
     context= {'user': user, 'rooms': rooms, 'room_messages': room_messages, 'topics': topics}
-    return render(request, 'learn/profile.html', context)
+    return render(request, 'profile.html', context)
 
 
 def createRoom(request):
@@ -71,7 +71,7 @@ def createRoom(request):
        return redirect('roomhome')
    
     context = {'form': form, 'topics': topics}
-    return render(request, 'learn/room_form.html', context)
+    return render(request, 'room_form.html', context)
 
 @login_required(login_url='login')
 def updateRoom(request, pk):
@@ -91,7 +91,7 @@ def updateRoom(request, pk):
         return redirect('roomhome')
 
     context = {'form': form, 'topics': topics, 'room': room}
-    return render(request, 'learn/room_form.html', context)
+    return render(request, 'room_form.html', context)
 
 @login_required(login_url='login')
 def deleteRoom(request, pk):
@@ -104,7 +104,7 @@ def deleteRoom(request, pk):
         room.delete()
         return redirect('roomhome')
 
-    return render(request, 'learn/delete.html', {'obj': room})
+    return render(request, 'delete.html', {'obj': room})
 
 
 @login_required(login_url='login')
@@ -130,14 +130,14 @@ def updateUser(request):
         if form.is_valid():
             form.save()
             return redirect('user-profile', pk=user.id)
-    return render(request, 'learn/update-user.html', {'form': form})
+    return render(request, 'update-user.html', {'form': form})
 
 
 def topicsPage(request):
     q = request.GET.get('q') if request.GET.get('q') != None else ''
     topics = Topic.objects.filter(name__icontains=q)
-    return render(request, 'learn/topics.html', {'topics': topics})
+    return render(request, 'topics.html', {'topics': topics})
 
 def activityPage(request):
     room_messages = Message.objects.all()
-    return render(request, 'learn/activity.html', {'room_messages': room_messages})
+    return render(request, 'activity.html', {'room_messages': room_messages})

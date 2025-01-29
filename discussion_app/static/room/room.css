@@ -380,6 +380,10 @@ a {
   fill: var(--color-dark-light);
 }
 
+.dropdown-menu{
+  background-color: #931c20;
+}
+
 .dropdown-button {
   background: transparent;
   border: 0;
@@ -435,7 +439,8 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -46%);
-  background-color: var(--color-dark);
+  /* background-color: var(--color-dark); */
+  background-color: #d6d6d6;
   border-radius: 1rem;
   box-shadow: 1px 1px 6px 3px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -508,7 +513,8 @@ a {
   padding: 1rem;
   border-radius: 3px;
   width: 100%;
-  color: var(--color-light);
+  /* color: var(--color-light); */
+  color: #2d2d39;
   font-weight: 500;
   outline: none;
 }
@@ -641,7 +647,8 @@ a {
 .roomList__header h2 {
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--color-light);
+  /* color: var(--color-light); */
+  color: #2d2d39;
   letter-spacing: 1px;
 }
 
@@ -785,7 +792,9 @@ a {
 .activities__boxContent {
   margin-left: 4.2rem;
 }
-
+.activities__boxContent p{
+color: #d6d6d6;
+}
 .activities__boxContent {
   font-size: 1.4rem;
 }
@@ -813,7 +822,9 @@ a {
 
 .create-room.layout .layout__box {
   max-width: 68rem;
+  background-color: #d6d6d6;
 }
+
 
 /*==============================
 =>  Update Account
@@ -829,6 +840,21 @@ a {
 
 .delete-item.layout .layout__box {
   max-width: 68rem;
+  background-color: #d6d6d6;
+  color: #992c2c;
+}
+
+.delete-item.layout a svg{
+  color: #d6d6d6;
+}
+
+.layout__boxHeader{
+  background-color: #992c2c;
+}
+
+.for__group input{
+  background-color: #C12026;
+  color: #d6d6d6;
 }
 
 /*==============================
@@ -885,7 +911,8 @@ a {
 
 .profile__info h3 {
   font-size: 2rem;
-  color: var(--color-light);
+  /* color: var(--color-light); */
+  color: #2d2d39;
   font-weight: 400;
 }
 
@@ -1034,6 +1061,9 @@ a {
   color: var(--color-main);
 }
 
+.room__info span{
+  color: #d6d6d6;
+}
 .room__hosted p {
   text-transform: uppercase;
   color: var(--color-gray);
@@ -1081,6 +1111,7 @@ a {
 .threads {
   /* background: var(--color-bg); */
   background: #771616;
+  color: #d6d6d6;
   border-radius: 0.7rem;
   overflow-y: auto;
   height: 100%;
@@ -1123,6 +1154,7 @@ a {
   margin-top: 0.5rem;
 }
 
+
 .room__message {
   padding: 2rem;
   position: absolute;
@@ -1135,7 +1167,8 @@ a {
 
 .room__message > form > input {
   resize: none;
-  background-color: var(--color-dark-light);
+  /* background-color: var(--color-dark-light); */
+  background-color: #C12026;
   color: var(--color-light);
   border: none;
   outline: none;
@@ -1154,7 +1187,8 @@ a {
 }
 
 .participants__top span {
-  color: var(--color-main);
+  /* color: var(--color-main); */
+  color: black;
   font-size: 1.3rem;
   text-transform: none;
 }

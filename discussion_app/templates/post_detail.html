@@ -1,8 +1,12 @@
-
-
+{% extends "main-room.html" %}
 
 {% block content %}
   <h1>{{ post.content }}</h1>
   <h2>Comments</h2>
   <ul>
-    {% for comment in comments %}
+    {% for comment in comments %}
+      <!-- comment template here -->
+    {% endfor %}
+  </ul>
+{% endblock content %}
+

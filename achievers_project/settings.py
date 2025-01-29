@@ -67,6 +67,7 @@ TEMPLATES = [
         'DIRS': [
             BASE_DIR/ 'achievers_app/templates',
             BASE_DIR/ 'user_manager_app/templates',
+            BASE_DIR/ 'discussion_app/templates',
         
         ],
         'APP_DIRS': True,

@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 from django.urls import path
 
 # Please, put all the urls specific to user_manager_app here
+app_name = 'user_manager_app'
 
 
 

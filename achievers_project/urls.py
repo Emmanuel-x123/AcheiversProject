@@ -33,8 +33,8 @@ urlpatterns = [
     path('contact-us/', views.contact_us, name='contact-us'),
     path('FAQ/', views.FAQ, name='FAQ'),
     path('our-team/', views.our_team, name='our-team'),
-    path('user/', include('user_manager_app.urls')),
-    
+    path('user/', include('user_manager_app.urls',namespace='user_manager_app')),
+    path('', include('discussion_app.urls')),   
 ]
 
 # if settings.DEBUG:
